@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.grupo20.iamfree.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_pantallaFragment"
+            app:destination="@id/pantallaFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_calendario"
+            app:destination="@id/calendario" />
+        <action
+            android:id="@+id/action_FirstFragment_to_eliminarFragment"
+            app:destination="@id/eliminarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.grupo20.iamfree.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_galeriaFragment"
+            app:destination="@id/galeriaFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_guardarnescaneadaFragment"
+            app:destination="@id/guardarnescaneadaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.grupo20.iamfree.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_thirdFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_thirdFragment_to_grabar2Fragment"
+            app:destination="@id/grabar2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pantallaFragment"
+        android:name="com.grupo20.iamfree.PantallaFragment"
+        android:label="fragment_pantalla"
+        tools:layout="@layout/fragment_pantalla" >
+        <action
+            android:id="@+id/action_pantallaFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendario"
+        android:name="com.grupo20.iamfree.Calendario"
+        android:label="fragment_calendario"
+        tools:layout="@layout/fragment_calendario" >
+        <action
+            android:id="@+id/action_calendario_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_calendario_to_lunesFragment4"
+            app:destination="@id/lunesFragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/lunesFragment4"
+        android:name="com.grupo20.iamfree.LunesFragment"
+        android:label="fragment_lunes"
+        tools:layout="@layout/fragment_lunes" >
+        <action
+            android:id="@+id/action_lunesFragment4_to_calendario"
+            app:destination="@id/calendario" />
+    </fragment>
+    <fragment
+        android:id="@+id/eliminarFragment"
+        android:name="com.grupo20.iamfree.EliminarFragment"
+        android:label="fragment_eliminar"
+        tools:layout="@layout/fragment_eliminar" >
+        <action
+            android:id="@+id/action_eliminarFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/grabar2Fragment"
+        android:name="com.grupo20.iamfree.grabar2Fragment"
+        android:label="fragment_grabar2"
+        tools:layout="@layout/fragment_grabar2" >
+        <action
+            android:id="@+id/action_grabar2Fragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+        <action
+            android:id="@+id/action_grabar2Fragment_to_guardarrFragment"
+            app:destination="@id/guardarrFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/guardarrFragment"
+        android:name="com.grupo20.iamfree.GuardarrFragment"
+        android:label="fragment_guardarr"
+        tools:layout="@layout/fragment_guardarr" >
+        <action
+            android:id="@+id/action_guardarrFragment_to_grabar2Fragment"
+            app:destination="@id/grabar2Fragment" />
+        <action
+            android:id="@+id/action_guardarrFragment_to_fileFragment"
+            app:destination="@id/fileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fileFragment"
+        android:name="com.grupo20.iamfree.FileFragment"
+        android:label="fragment_file"
+        tools:layout="@layout/fragment_file" >
+        <action
+            android:id="@+id/action_fileFragment_to_guardarrFragment"
+            app:destination="@id/guardarrFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galeriaFragment"
+        android:name="com.grupo20.iamfree.galeriaFragment"
+        android:label="fragment_galeria"
+        tools:layout="@layout/fragment_galeria" >
+        <action
+            android:id="@+id/action_galeriaFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_galeriaFragment_to_guardarnescaneadaFragment"
+            app:destination="@id/guardarnescaneadaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/guardarnescaneadaFragment"
+        android:name="com.grupo20.iamfree.guardarnescaneadaFragment"
+        android:label="fragment_guardarnescaneada"
+        tools:layout="@layout/fragment_guardarnescaneada" >
+        <action
+            android:id="@+id/action_guardarnescaneadaFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+</navigation>
